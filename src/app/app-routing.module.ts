@@ -30,7 +30,7 @@ const routes: Routes = [
   ]},
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardService], children: [
-    {path: '', redirectTo: 'admin-list', pathMatch: 'full'},
+    {path: '', redirectTo: 'blog-list', pathMatch: 'full'},
     {path: 'blog-list', component: BlogListComponent},
     {path: 'admin-list', component: AdminListComponent},
     {path: 'author-list', component: AuthorListComponent},
