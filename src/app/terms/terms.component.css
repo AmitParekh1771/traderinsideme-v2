@@ -1,0 +1,16 @@
+.terms {
+    margin-bottom: 100px;
+}
+
+
+h1,h2,h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    color: var(--text-dark);
+}
+
+p, li {
+    color: var(--text-light);
+}

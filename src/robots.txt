@@ -1,0 +1,14 @@
+Sitemap: https://www.traderinsideme.com/sitemap.xml
+
+User-agent: *
+Allow: /
+Allow: /article/
+Allow: /blog/*
+Allow: /about/
+Allow: /terms/
+Allow: /privacy-policy/
+Allow: /cookie-policy/
+Allow: /not-found/
+
+Disallow: /api/
+Disallow: /admin/

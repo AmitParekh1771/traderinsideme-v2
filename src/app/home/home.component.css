@@ -1,0 +1,204 @@
+.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: -1;
+    position: relative;
+}
+
+@media only screen and (max-width: 1075px) {
+    .hero { padding-top: 50px; }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    width: 150vw;
+    height: 300%;
+    background: radial-gradient(circle at 80% 100%, rgba(252, 252, 252, 0.466) 0%, rgb(222, 222, 222) 100%);
+    z-index: -1200;
+}
+
+h1, h2 { margin: 0px; }
+
+.giant-head {
+    line-height: 1.2;
+    padding-bottom: 20px;
+}
+
+.hero-text {
+    position: relative;
+}
+
+.hero-images {
+    width: 50%;
+    position: relative;
+    perspective: 500px;
+    transform: translate(-100px, -20px);
+}
+
+
+.bottom-right-svg {
+    position: absolute;
+    image-rendering: pixelated;
+    transform: rotateY(354deg) rotateX(2deg) skewY(359deg) translateZ(-250px);
+    top: 80px;
+    left: 470px;
+}
+
+.top-right-svg {
+    position: absolute;
+    image-rendering: pixelated;
+    transform: rotateY(354deg) rotateX(2deg) skewY(359deg) translateZ(-270px);
+    top: -280px;
+    left: 475px;
+}
+
+.bottom-left-svg {
+    position: absolute;
+    image-rendering: pixelated;
+    transform: rotateY(354deg) rotateX(2deg) skewY(359deg) translateZ(-310px);
+    top: 85px;
+    left: -120px;
+}
+
+.top-left-svg {
+    position: absolute;
+    image-rendering: pixelated;
+    transform: rotateY(354deg) rotateX(2deg) skewY(359deg) translateZ(-330px);
+    top: -275px;
+    left: -120px;
+}
+
+.right-shadow {
+    transform: scale(1.5) rotate(3deg);
+    position: absolute;
+    filter: blur(20px);
+    z-index: -1000;
+    top: 300px;
+    left: 270px;
+}
+
+.login-box { 
+    padding: 40px; 
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-items: center;
+    z-index: 1000;
+    box-shadow: 0px -5px 0px rgb(60 141 250), 0px 5px 0px rgb(0 71 166);
+}
+
+.login-box button { min-width: 150px; }
+.login-box input { width: 90%; }
+
+
+.login-box input:focus { 
+    box-shadow: 0 5px 10px rgba(212, 212, 212, 0.445);
+    background: #ffffff; 
+}
+
+.login-box button:hover {
+    border: 1px solid var(--button-hover-border);
+    background: var(--button-hover-fill);
+    box-shadow: 0px 0px 10px var(--button-shadow);
+    color: #ffffff;
+}
+
+
+.login-box button:disabled {
+    color: var(--text-light);
+    pointer-events: none;
+    border: 1px solid var(--container-border);
+}
+
+
+.login-box .alert {
+    color: red;
+    width: 90%;
+    border: 1px solid rgba(255, 0, 0, 0.301);
+    background: rgba(255, 0, 0, 0.158);
+    margin-top: 5px;
+}
+
+.email-input {
+    display: grid;
+    justify-items: center;
+}
+
+
+
+.clipboard {
+    background: #eaf4ff;
+    color: var(--text-dark);
+    box-shadow: rgb(0 0 0 / 70%) 0px 25px 20px -20px;
+    padding: 30px;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    z-index: 999999;
+    transform: translateX(-50%);
+    max-width: 400px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    align-items: center;
+}
+.bi-envelope-open {
+    width: 40px;
+    height: 40px;
+}
+.bi-x {
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+}
+
+
+@media only screen and (min-width: 1075px) {
+    .giant-head { font-size: 80px; }
+    .hero-text { width: 47%; }
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        text-align: left;
+    }
+    .hero-images { display: block; visibility: hidden; }
+    .subscription-box {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 1075px) and (min-width: 600px) {
+    .giant-head { font-size: 70px; }
+    .hero-text { width: 100%; }
+    .hero { text-align: center; }
+    .hero-images { display: none; }
+    .subscription-box {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .giant-head { font-size: 50px; }
+    .hero-text { width: 100%; }
+    .hero { text-align: center; }
+    .hero-images { display: none; }
+    .subscription-box {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 1075px) and (max-width: 1250px) {
+    .giant-head { font-size: 70px; }
+    .hero-images { transform: translate(0px, -20px);}
+}

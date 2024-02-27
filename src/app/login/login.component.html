@@ -1,0 +1,43 @@
+<div class="login-parent">
+    <div class="m-a admin-login container fill border text-center">
+        <span class="login-title text-dark _24 _700">Login</span>
+        
+        <form #f="ngForm" (ngSubmit)="submit(f.value)">
+            <div class="admin-email">
+                <input type="email" 
+                    ngModel
+                    name="email"
+                    #email="ngModel"
+                    required
+                    pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                    id="email" 
+                    class="a-u border button _14"
+                    placeholder="Email">
+                <div class="alert _14 button" *ngIf="email.invalid && email.touched">
+                    <div *ngIf="email.control.errors.required">Email is required.</div>
+                    <div *ngIf="email.control.errors.pattern">Invalid Email address.</div>
+                </div>
+            </div>
+            <div class="admin-password">
+                <input type="password" 
+                    ngModel
+                    name="password"
+                    required
+                    #password="ngModel"
+                    id="password" 
+                    class="a-u border button _14"
+                    placeholder="Password">
+                <div class="alert _14 button" *ngIf="password.invalid && password.touched">
+                    <div *ngIf="password.control.errors.required">Password is required.</div>
+                </div>
+            </div>
+            <div class="alert _14 button" *ngIf="!isAuthorized">
+                Invalid email address or password
+            </div>
+            <button [disabled]="f.invalid" 
+                type="submit" 
+                class="sp-border pointer button slow-change _14 _700 text-dark white-fill"
+                >Submit</button>
+        </form>
+    </div>
+</div>

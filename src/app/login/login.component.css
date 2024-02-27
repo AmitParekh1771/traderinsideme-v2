@@ -1,0 +1,55 @@
+.login-parent {
+    padding: 0px 20px;
+}
+
+.admin-login {
+    display: grid;
+    margin: 50px auto;
+    max-width: 400px;
+}
+
+.login-title { margin-bottom: 20px; }
+
+.admin-login form {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    gap: 20px;
+}
+
+.admin-email, .admin-password { width: 90%; }
+
+.admin-login button {
+    width: 150px;
+}
+
+.admin-login input {
+    display: block;
+    width: -webkit-fill-available;
+}
+
+.admin-login button:hover {
+    color: var(--text-white);
+    background: var(--button-hover-fill);
+    border: 1px solid var(--button-hover-border);
+    box-shadow: 0px 0px 10px var(--button-shadow);
+}
+
+.admin-login input:focus {
+    background: var(--text-white);
+    box-shadow: 0px 5px 10px var(--container-shadow);
+    
+}
+
+.admin-login button:disabled {
+    color: var(--text-light);
+    pointer-events: none;
+    border: 1px solid var(--container-border);
+}
+
+.admin-login .alert {
+    color: red;
+    border: 1px solid rgba(255, 0, 0, 0.301);
+    background: rgba(255, 0, 0, 0.158);
+    margin-top: 5px;
+}

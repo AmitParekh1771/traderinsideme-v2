@@ -1,0 +1,25 @@
+
+@media only screen and (min-width: 1360px) {
+    .main-web-body {
+        max-width: 1250px;
+    }
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1360px) {
+    .main-web-body {
+        max-width: 1165px;
+    }
+}
+
+@media only screen and (min-width: 1075px) and (max-width: 1250px) {
+    .main-web-body {
+        max-width: 960px;
+    }
+}
+
+
+@media only screen and (max-width: 1075px) {
+    .main-web-body {
+        padding: 0 5%;
+    }
+}

@@ -1,1 +1,206 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+/* css reset */
+html, body {
+    overflow-x: clip;
+    padding: 0;
+    margin: 0;
+}
+* {
+    font-family: 'Noto Sans', sans-serif;
+    word-break: break-word;
+}
+
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: unset;
+}
+
+a:visited { color: unset; }
+
+a:hover {
+    color: var(--text-highlight);
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* css reset */
+
+:root {
+    /* container */
+    --container-fill: #fcfcfc;
+    --container-border: #dddddd;
+    --container-shadow: rgba(145, 145, 145, 0.2);
+    --container-radius: 20px;
+    /* container */
+
+
+    /* button */
+    --button-border: #006AF9;
+    --button-fill: #fcfcfc;
+    --button-hover-fill: radial-gradient(circle at 100% -200%, #BC00FE, #8A0CFD 50%, #5319fb 100%);
+    --button-hover-border: #8A0CFD;
+    --button-shadow: rgba(83, 25, 251, 0.4);
+    /* button */
+
+    /* text colors */
+    --text-white: #ffffff;
+    --text-light: #666666;
+    --text-dark: #222222;
+    --text-highlight: #006AF9;
+    /* text colors */
+
+
+    /* social media color */
+    --linkedin: #0077B5;
+    --whatsapp: #25D366;
+    --instagram1: #FCCC63;
+    --instagram2: #FBAD50;
+    --instagram3: #E95950;
+    --instagram4: #BC2A8D;
+    --instagram5: #0077B5;
+    --facebook: #4267B2;
+    --twitter: #1DA1F2;
+    /* social media color */
+
+}
+
+/* scrollbar css */
+@media only screen and (min-width: 1075px) {
+    body::-webkit-scrollbar { width: 0.5em; }
+    body::-webkit-scrollbar-track { background-color: rgb(236, 236, 236); }
+    body::-webkit-scrollbar-thumb { background-color: rgb(94, 94, 94); border-radius: 0.25em; }
+}
+/* scrollbar css */
+
+.none { display: none; }
+.flex { display: flex; }
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+
+.row { flex-direction: row; }
+.row-reverse { flex-direction: row-reverse; }
+.col { flex-direction: column; }
+.col-reverse { flex-direction: column-reverse; }
+
+
+.j-c { justify-content: center; }
+.j-sb { justify-content: space-between; }
+.j-sa { justify-content: space-around; }
+.j-se { justify-content: space-evenly; }
+.flex-grow { flex-grow: 1; }
+.a-c { align-items: center; }
+.a-fs { align-items: flex-start; }
+.a-fe { align-items: flex-end; }
+.wrap { flex-wrap: wrap; }
+.no-wrap { flex-wrap: nowrap; }
+
+
+.pointer { cursor: pointer; }
+
+
+.padding-large-screen { max-width: 1250px; }
+.padding-laptop { max-width: 1165px; }
+.padding-tablet { max-width: 960px; }
+.padding-mobile { padding: 0 5%; }
+.w-100per { width: 100%; }
+
+
+.ox-h { overflow-x: hidden; }
+.oy-h { overflow-y: hidden; }
+.o-h { overflow: hidden; }
+.text-o-ellipsis { text-overflow: ellipsis; }
+
+
+.m-a { margin: auto; }
+.p-a { padding: auto; }
+.m-u { margin: unset; }
+.p-u { padding: unset; }
+.a-u { all: unset; }
+
+
+._8 { font-size: 8px; }
+._10 { font-size: 10px; }
+._12 { font-size: 12px; }
+._14 { font-size: 14px; }
+._16 { font-size: 16px; }
+._18 { font-size: 18px; }
+._20 { font-size: 20px; }
+._22 { font-size: 22px; }
+._24 { font-size: 24px; }
+._26 { font-size: 26px; }
+._28 { font-size: 28px; }
+._30 { font-size: 30px; }
+._40 { font-size: 40px; }
+._50 { font-size: 50px; }
+._60 { font-size: 60px; }
+._70 { font-size: 70px; }
+._80 { font-size: 80px; }
+._90 { font-size: 90px; }
+._100 { font-size: 100px; }
+._150 { font-size: 150px; }
+._200 { font-size: 200px; }
+
+
+._400 { font-weight: 400; }
+._500 { font-weight: 500; }
+._600 { font-weight: 600; }
+._700 { font-weight: 700; }
+
+
+.italic { font-style: italic; }
+.sub { vertical-align: sub; }
+.sup { vertical-align: super; }
+.underline { text-decoration: underline solid; text-underline-offset: 2px;}
+.line-height-1_2 { line-height: 1.2; }
+.line-through { text-decoration: line-through solid; }
+
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+
+.poppins { font-family: 'Poppins', sans-serif; }
+.noto { font-family: 'Noto Sans', sans-serif; }
+
+
+.text-white { color: #ffffff; }
+.text-light { color: #666666; }
+.text-dark { color: #222222; }
+.text-highlight { color: #006AF9; }
+
+
+.border { border: 1px solid #dddddd; }
+.sp-border { border: 1px solid #006AF9; }
+.shadow { box-shadow: 0 10px 10px rgba(145, 145, 145, 0.2); }
+.sp-shadow { box-shadow: 0 5px 16px rgba(83, 25, 251, 0.4); }
+.button { padding: 10px; border-radius: 0.25rem; }
+.container { padding: 20px; border-radius: 0.25rem; }
+.white-fill { background: #ffffff; }
+.fill { background: #fcfcfc; }
+.dark-fill { background: #222222; }
+.sp-fill { background: radial-gradient(circle at 100% -200%, #BC00FE, #8A0CFD 50%, #5319fb 100%); }
+
+
+.linkedin-fill { fill: #0077B5; }
+.instagram-fill { fill: url(#grad); }
+.facebook-fill { fill: #4267B2; }
+.twitter-fill { fill: #1DA1F2; }
+
+input.ng-invalid.ng-touched { border: 1px solid red; }
+textarea.ng-invalid.ng-touched { border: 1px solid red; }
+
+.slow-change { transition: all 0.2s ease-in-out; }

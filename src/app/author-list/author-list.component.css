@@ -1,0 +1,174 @@
+
+.author-add-box {
+    position: absolute;
+    min-width: 260px;
+    left: 50%;
+    top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-left: 25px;
+    justify-items: center;
+    transform: translate(-50%, 0px);
+    z-index: 1;
+}
+
+
+.author-add-box button {
+    width: 150px;
+}
+
+.author-add-box .field-input {
+    display: block;
+    width: 100%;
+    width: -webkit-fill-available;
+}
+
+.author-add-box button:hover {
+    color: var(--text-white);
+    background: var(--button-hover-fill);
+    border: 1px solid var(--button-hover-border);
+    box-shadow: 0px 0px 10px var(--button-shadow);
+}
+
+.author-add-box .field-input:focus {
+    background: var(--text-white);
+    box-shadow: 0px 5px 10px var(--container-shadow);
+    
+}
+
+.author-add-box #file {
+    min-width: 14rem;
+    margin: 0;
+    opacity: 0;
+}
+
+.author-add-box .file-custom {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    border: 0.075rem solid #ddd;
+    border-radius: 0.25rem;
+}
+
+.author-add-box .file {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+.author-add-box .file-custom::after {
+    position: absolute;
+    top: -0.075rem;
+    right: -0.075rem;
+    bottom: -0.075rem;
+    z-index: 6;
+    display: block;
+    content: "Browse";
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+    border: 0.075rem solid #ddd;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.author-add-box .file-custom::before {
+    content: attr(file-name);
+    color: var(--text-light);
+}
+
+.author-add-box button:disabled {
+    color: var(--text-light);
+    pointer-events: none;
+    border: 1px solid var(--container-border);
+}
+
+.author-add-box .alert {
+    color: red;
+    border: 1px solid rgba(255, 0, 0, 0.301);
+    background: rgba(255, 0, 0, 0.158);
+    margin-top: 5px;
+}
+
+.author-add-box-item {
+    width: 100%;
+}
+
+.author-list { 
+    width: 80%; 
+    padding: 100px 0px;
+    margin: 0px auto;
+}
+
+.author-list-info {
+    display: grid;
+    grid-template-columns: 2.5fr 4fr 2.5fr;
+    align-items: center;
+}
+
+.author-list-info .bi {
+    margin: 10px;
+    width: 20px;
+    padding: 10px;
+    height: 20px;
+}
+
+.bi-trash:hover {background: rgba(255, 0, 0, 0.103);}
+
+.bi-clipboard:hover {background: rgba(0, 255, 255, 0.11);}
+
+.bi-pencil:hover {background: rgba(0, 0, 255, 0.11);}
+
+.author-list-items::after {
+    content: '';
+    background: var(--text-light);
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
+.add-button {
+    margin: 20px 0px;
+    padding: 10px 20px;
+}
+
+.add-button:hover {
+    color: var(--text-dark);
+    box-shadow: 0 10px 10px var(--container-shadow);
+}
+
+.author-list-blur {
+    filter: blur(5px);
+}
+
+.bi-x {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.socialMedia-group {
+    display: grid;
+    gap: 10px;
+}
+
+.clipboard {
+    background: var(--text-light);
+    margin-left: 25px;
+    color: var(--text-white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

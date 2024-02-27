@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100%;
+    background: radial-gradient(circle at 80% 0%, rgba(252, 252, 252, 0.466) 0%, rgb(230, 230, 230) 100%);
+    z-index: -1200;
+}
+
+.h-line {
+    margin: 25px 0px;
+    height: 2px;
+    border-radius: 1px;
+    width: 300px;
+    background: var(--text-light);
+    opacity: 0.2;
+}
+
+.warning { max-width: 80%; }
+
+.footer-nav {
+    padding: 8px 20px;
+    margin: 20px 20px 0px 20px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-nav:hover {
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+}

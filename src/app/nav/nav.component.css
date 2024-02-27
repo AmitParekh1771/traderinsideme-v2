@@ -1,0 +1,137 @@
+
+.top-head { min-width: 20%; }
+
+.nav-body, .top-head { min-height: 60px; }
+
+
+.h-line {
+    width: 100%;
+    position: relative;
+    height: 1px;
+    background: var(--text-light);
+    opacity: 0.2;
+    border-radius: 0.5px;
+}
+
+.wrapper { 
+    top: 0px; 
+    position: relative;
+    min-width: 80%;
+}
+
+.overflow-y-clip { overflow-y: clip; }
+
+.drop-items-m {
+    top: 0px;
+    position: relative;
+}
+
+.drop-items-m li { width: 100%; }
+
+.drop-items-l {
+    top: 0px;
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(60px, 60px);
+    background: #fcfcfc;
+    box-shadow: 5px 5px 10px #00000029;
+    z-index: 100;
+}
+
+.line-w { width: 80%; }
+
+.bi-chevron-up {
+    margin-left: 10px;
+}
+
+.bi-chevron-down {
+    margin-left: 10px;
+    transform: rotate(540deg);
+}
+
+.ham-burger {
+    width: 32px;
+    height: 18px;
+}
+
+.ham-burger div {
+    background: var(--text-dark);
+    height: 4px;
+    top: 0;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.xpadding { 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.left-padding-30 {
+    padding-left: 30px;
+}
+
+.right-padding-30 {
+    padding-right: 30px;
+}
+
+.ypadding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.line1 {
+    transform: translate(0px, 7px) rotate(400deg);
+}
+
+.line2 {
+    transform: translate(0px, -7px) rotate(-400deg);
+}
+
+.explore { box-sizing: border-box; }
+
+.explore li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.explore svg { width: 20px; height: 20px;}
+
+
+.explore path { fill: var(--text-light); }
+
+.linkedin:hover #linkedin { fill: var(--linkedin); }
+
+.instagram:hover #instagram { fill: url(#grad); }
+
+.facebook:hover #facebook { fill: var(--facebook); }
+
+.twitter:hover #twitter { fill: var(--twitter); }
+
+.search:hover #search { fill: var(--text-dark); }
+
+
+.search-input {
+    top: 0px;
+    overflow-y: clip;
+    position: relative;
+}
+
+.search-input-field {
+    top: 0px;
+    display: block;
+    margin: 10px 0px;
+    padding: 10px 60px 10px 10px;
+    outline: none;
+}
+
+.bi-x {
+    position: absolute;
+    top: 33px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 1000;
+    transform: translateY(-50%);
+}

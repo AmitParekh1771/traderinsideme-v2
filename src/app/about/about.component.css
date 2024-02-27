@@ -1,0 +1,76 @@
+.about-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.heading { margin: 10px 20px;}
+
+.title {
+    margin: 30px 0px;
+    word-break: break-word;
+}
+
+.container1 {
+    margin: 80px 0px;
+}
+
+.img-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.mydescp { text-align: justify; }
+
+.myimg {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(0px, 70px);
+}
+
+.mylogo {
+    width: 175px;
+    position: absolute;
+    transform: translate(0px, -10px);
+}
+
+.height1 { height: 350px; }
+
+.height2 { height: 300px; }
+
+.img-container .banner {
+    position: relative;
+    width: 250px;
+    transform: translate(0px, -66px);
+}
+
+
+.content-width { width: 65%;}
+
+.m-b { margin-bottom: 30px; }
+
+.socials { box-sizing: border-box; transform: scale(0.9);}
+
+.socials li {
+    padding: 15px;
+}
+
+.socials a {
+    margin: 0px;
+}
+
+.content-container { padding: 0px 20px; }
+
+.socials path { fill: var(--text-light); }
+
+.linkedin:hover #linkedin { fill: var(--linkedin); }
+
+.instagram:hover #instagram { fill: url(#grad); }
+
+.facebook:hover #facebook { fill: var(--facebook); }
+
+.twitter:hover #twitter { fill: var(--twitter); }
+
+.search:hover #search { fill: var(--text-dark); }

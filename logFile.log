@@ -1,0 +1,97 @@
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"::1 GET /"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:26:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"::1 GET /favicon.ico"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:26:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::ffff:127.0.0.1 GET /"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:26:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"::ffff:127.0.0.1 GET /favicon.ico"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:26:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"::1 GET /runtime.3e41f279565f13069063.js"}
+{"level":"info","message":"::1 GET /polyfills.20a1fdcabcfae73897fd.js"}
+{"level":"info","message":"::1 GET /main.c0f7e9c86ac0d712d914.js"}
+{"level":"info","message":"::1 GET /styles.d5367fed8e89146f842a.css"}
+{"level":"info","message":"::1 GET /api/blogs/"}
+{"level":"info","message":"::1 GET /path/to/icons/favicon.ico"}
+{"level":"info","message":"::1 GET /path/to/icons/site.webmanifest"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"::1 GET /api/blogs/"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"::1 GET /"}
+{"level":"info","message":"::1 GET /api/blogs/"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:19:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"code":"MODULE_NOT_FOUND","level":"error","message":"Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js","requireStack":["E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js","E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js","E:\\Projects\\traderinsideme-v2\\index.js"],"stack":"Error: Cannot find module 'html'\nRequire stack:\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\express.js\n- E:\\Projects\\traderinsideme-v2\\node_modules\\express\\index.js\n- E:\\Projects\\traderinsideme-v2\\index.js\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n    at Module.require (internal/modules/cjs/loader.js:974:19)\n    at require (internal/modules/cjs/helpers.js:92:18)\n    at new View (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\view.js:81:14)\n    at Function.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\application.js:587:12)\n    at ServerResponse.render (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\response.js:1039:7)\n    at E:\\Projects\\traderinsideme-v2\\index.js:19:32\n    at newFn (E:\\Projects\\traderinsideme-v2\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (E:\\Projects\\traderinsideme-v2\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to database"}

@@ -1,0 +1,77 @@
+
+.admin-side-bar {
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: var(--text-dark);
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin-side-bar .nav-items { width: 100%; }
+
+.items {
+    padding: 15px 10px;
+    overflow-x: clip;
+    cursor: pointer;
+}
+
+.items span { 
+    margin: 0px 20px; 
+    white-space: nowrap;
+}
+
+.items:hover {
+    background: rgba(255, 255, 255, 0.158);
+}
+
+.nav-items {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.line1 {
+    transform: translate(0px, 7px) rotate(400deg);
+}
+
+.line2 {
+    transform: translate(0px, -7px) rotate(-400deg);
+}
+
+.ham-burger {
+    width: 24px;
+    height: 24px;
+}
+
+.ham-burger div {
+    width: 24px;
+    height: 16px;
+}
+
+.ham-burger .flex div {
+    background: var(--text-white);
+    height: 2px;
+    top: 0;
+    border-radius: 1px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin-side-bar svg {
+    fill: var(--text-white);
+    width: 24px;
+    height: 24px;
+}
+
+.overlay { 
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    background: var(--text-dark);
+    opacity: 0.8;
+    z-index: 500;
+ }
+
+.router-outlet { margin-left: 50px; }
+

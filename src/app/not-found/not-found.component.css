@@ -1,0 +1,39 @@
+.not-found {
+    padding-top: 100px;
+    padding-bottom: 350px;
+}
+
+.background-svg{
+    position: absolute;
+    top: 170px;
+    opacity: 0.2;
+    transform: scale(2.2);
+    z-index: -10000;
+}
+
+.freepik:hover {
+    color: var(--text-highlight);
+}
+
+@media only screen and (max-width: 1075px) {
+    .background-svg{
+        transform: scale(1.5);
+    }
+}
+
+
+@media only screen and (min-width: 1075px) {
+    .status-code { font-size: 200px; }
+    .status-message { font-size: 50px; }
+}
+
+@media only screen and (max-width: 1075px) and (min-width: 600px) {
+    .status-code { font-size: 150px; }
+    .status-message { font-size: 40px; }
+}
+
+@media only screen and (max-width: 600px) {
+    .status-code { font-size: 100px; }
+    .status-message { font-size: 30px; }
+}
+

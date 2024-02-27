@@ -1,0 +1,87 @@
+<form #f="ngForm" 
+    (ngSubmit)="addAdmin(f.value)" 
+    *ngIf="isActive"
+    class="admin-add-box text-center container border fill shadow">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-dark)" class="bi bi-x pointer" viewBox="0 0 16 16" (click)="isActive=false">
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+    <div class="_16 _700 text-dark">Add Admin</div>
+    <div class="admin-add-box-item">
+        <input type="text" 
+            required
+            ngModel
+            #name="ngModel" 
+            name="name" 
+            class="field-input a-u border button _14 text-dark"
+            placeholder="Name">
+        <div class="alert _14 button" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.control.errors.required">Admin name is required.</div>
+        </div>
+    </div>
+    <div class="admin-add-box-item">
+        <input type="email"  
+            required
+            ngModel
+            #email="ngModel" 
+            name="email" 
+            class="field-input a-u border button _14 text-dark"
+            placeholder="Email">
+        <div class="alert _14 button" *ngIf="email.invalid && email.touched">
+            <div *ngIf="email.control.errors.required">Admin email is required.</div>
+            <div *ngIf="email.control.errors.pattern">Invalid Email address.</div>
+        </div>
+    </div>
+    <div class="admin-add-box-item">
+        <input type="password"  
+            required
+            ngModel
+            #password="ngModel" 
+            name="password" 
+            class="field-input a-u border button _14 text-dark"
+            placeholder="password">
+        <div class="alert _14 button" *ngIf="password.invalid && password.touched">
+            <div *ngIf="password.control.errors.required">Admin password is required.</div>
+        </div>
+    </div>
+    <div class="admin-add-box-item">
+        <input type="checkbox" 
+            checked="checked"
+            name="isHead"
+            ngModel
+            #isHead="ngModel">
+        <span class="_14 _700 text-dark">isHead</span>
+    </div>
+    <button [disabled]="f.invalid" 
+        type="submit" 
+        class="sp-border pointer button slow-change _14 _700 text-dark white-fill"
+        >Submit</button>
+</form>
+
+<div class="admin-list slow-change" 
+    [class.admin-list-blur]="isActive"
+    >
+    <div class="admin-list-items">
+        <div class="container _28 poppin _700 text-dark text-center">
+            Admins
+        </div>
+    </div>
+    <div class="admin-list-items" *ngFor="let admin of admins">
+        <div class="admin-list-info">
+            <div class="container _16 text-dark text-left">
+                {{ admin.name }}
+            </div>
+            <div class="container _16 text-dark text-center">
+                {{ admin.email }}
+            </div>
+            <div title="Delete" class="flex col a-fe">
+                <svg xmlns="http://www.w3.org/2000/svg" (click)="deleteAdmin(admin._id)" width="16" height="16" fill="red" class="bi pointer slow-change bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                  </svg>
+            </div>
+        </div>
+    </div>
+    <div class="text-center _16 _700 pointer slow-change text-light add-button fill"
+        (click)="isActive=true"
+        >Add Admin</div>
+</div>

@@ -1,0 +1,238 @@
+<div class="create-blog-container" 
+    [ngClass]="{
+        'create-blog-desktop-view': media.l,
+        'create-blog-mobile-view': !media.l
+    }">
+    <div class="create-blog-input">
+        <div class="refresh-icon" (click)="resetWork()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--text-light)" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+              </svg>
+        </div>
+        <form #f="ngForm" 
+            (ngSubmit)="addBlog(f.value)" 
+            (change)="saveChanges()"
+            class="blog-add-box text-center">
+            <div class="_40 poppins _700 text-dark">{{ update ? 'Update' : 'Add'}} Blog</div>
+            <div class="blog-add-box-item">
+                <label class="label" for="title">Title :</label>
+                <input type="text" 
+                    required
+                    [(ngModel)]="blog.title"
+                    #title="ngModel" 
+                    name="title" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Title">
+                <div class="alert _14 button" *ngIf="title.invalid && title.touched">
+                    <div *ngIf="title.control.errors.required">Blog title is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="contentTitle">Content Title :</label>
+                <input type="text" 
+                    required
+                    [(ngModel)]="blog.contentTitle"
+                    #contentTitle="ngModel" 
+                    name="contentTitle" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Content Title">
+                <div class="alert _14 button" *ngIf="contentTitle.invalid && contentTitle.touched">
+                    <div *ngIf="contentTitle.control.errors.required">Blog Content Title is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="route">Route :</label>
+                <input type="text" 
+                    required
+                    [(ngModel)]="blog.route"
+                    #route="ngModel" 
+                    name="route" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Route">
+                <div class="alert _14 button" *ngIf="route.invalid && route.touched">
+                    <div *ngIf="route.control.errors.required">Blog Route is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="image">Featured image url :</label>
+                <input type="url"  
+                    required
+                    [(ngModel)]="blog.image"
+                    #image="ngModel" 
+                    name="image" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Image source">
+                <div class="alert _14 button" *ngIf="image.invalid && image.touched">
+                    <div *ngIf="image.control.errors.required">Blog Image source is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="description">Blog Description :</label>
+                <textarea rows="5" 
+                    required
+                    [(ngModel)]="blog.description"
+                    #description="ngModel" 
+                    name="description" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Description of Blog"></textarea>
+                <div class="alert _14 button" *ngIf="description.invalid && description.touched">
+                    <div *ngIf="description.control.errors.required">Blog description is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="author">Author :</label>
+                <select name="cars" 
+                    required
+                    [ngModel]="authorID"
+                    (change)="updateAuthor(author)"
+                    #author="ngModel"
+                    name="author"
+                    class="field-input a-u border button _14 text-dark">
+                    <option *ngFor="let author of authors" value="{{author._id}}">{{author.name}}</option>
+                </select>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="canonicalURL">Canonical url :</label>
+                <input type="url"  
+                    required
+                    [(ngModel)]="blog.canonicalURL"
+                    #canonicalURL="ngModel" 
+                    name="canonicalURL" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Canonical URL source">
+                <div class="alert _14 button" *ngIf="canonicalURL.invalid && canonicalURL.touched">
+                    <div *ngIf="canonicalURL.control.errors.required">Blog Canonical URL is required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label">Image uploader :</label>
+                <label class="file w-100per">
+                    <input type="file" 
+                        id="file"
+                        (change)="uploadFile($event)">
+                    <div class="file-custom _14" [attr.file-name]="fileName || 'Choose Image'"></div>
+                </label>
+                <div style="margin: 5px 10px;" class="text-light flex _12 _700">
+                    <span style="cursor: text;">{{fileURL || 'Uploaded file url display here'}}</span>
+                    <a title="preview" class="flex col j-c" style="margin-left: 5px;" target="_blank" href="{{fileURL || '#'}}">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" style="width: 12px; height:12px" fill="var(--text-light)" class="bi bi-arrow-up-right-square pointer" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label">Content :</label>
+                <div class="content-editor">
+                    <ace style="height:600px; border: 1px solid lightgray;"
+                        [disabled]="false" 
+                        [mode]="'html'"
+                        [theme]="'github'"
+                        [config]="{ }"
+                        [(value)]="blog.content">
+                    </ace>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="tags">Tags :</label>
+                <input type="text" 
+                    required
+                    [(ngModel)]="blog.tags"
+                    (change)="updateTags(tags)"
+                    #tags="ngModel" 
+                    name="tags" 
+                    class="field-input a-u border button _14 text-dark"
+                    placeholder="Tags">
+                <div class="alert _14 button" *ngIf="tags.invalid && tags.touched">
+                    <div *ngIf="tags.control.errors.required">Blog Tags are required.</div>
+                </div>
+            </div>
+            <div class="blog-add-box-item">
+                <label class="label" for="category">Category :</label>
+                <select name="cars" 
+                    required
+                    [(ngModel)]="blog.categories"
+                    #categories="ngModel"
+                    name="categories"
+                    class="field-input border button _14 text-dark" multiple>
+                    <option value="technical-analysis">Technical Analysis</option>
+                    <option value="cryptocurrency">Cryptocurrency</option>
+                    <option value="trading-psychology">Trading Psychology</option>
+                    <option value="news">News</option>
+                    <option value="awareness">Awareness</option>
+                </select>
+            </div>
+            <button [disabled]="f.invalid" 
+                type="submit" 
+                class="sp-border pointer button slow-change _14 _700 text-dark white-fill"
+                >{{ update ? 'Update' : 'Publish'}}</button>
+        </form>
+    </div>
+    <div class="create-blog-output">
+        <div class="blog-body m-a text-dark">
+
+            <h1 class="title poppins text-center _700 line-height-1_2 _40">
+                {{ blog.contentTitle }}
+            </h1>
+        
+            <div class="author flex row j-c a-c" [class.col]="media.s">
+                <div class="short-descp flex j-sa">
+                    <div class="author-image">
+                        <img [src]="blog.author.image">
+                    </div>
+                    <div class="post-info flex wrap">  
+                        <div class="by flex col">
+                            <span class="_12 italic text-light">by</span> 
+                            <a class="_14 text-dark _700" 
+                                routerLink="/about"
+                                fragment="{{ blog.author.name.replace(' ', '-') }}">{{ blog.author.name }}</a>
+                        </div>
+                        <div class="on flex col">
+                            <span class="_12 italic text-light">on</span> 
+                            <span class="_14 text-dark _700">{{ blog.modifyingDate | date:'mediumDate' }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="socials flex" [style.marginLeft]=" !media.s ? '40px' : '0px'">
+                    <a [href]="blog.author.socialMedia.linkedin" target="_blank">
+                        <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="linkedin" d="M0,1.719A1.741,1.741,0,0,1,1.762,0H22.237A1.741,1.741,0,0,1,24,1.719V22.281A1.741,1.741,0,0,1,22.237,24H1.762A1.741,1.741,0,0,1,0,22.281ZM7.414,20.091V9.253h-3.6V20.091ZM5.614,7.773a1.878,1.878,0,1,0,.024-3.744A1.877,1.877,0,1,0,5.59,7.773Zm7.362,12.318V14.038a2.445,2.445,0,0,1,.12-.879,1.97,1.97,0,0,1,1.848-1.317c1.3,0,1.824.993,1.824,2.451v5.8h3.6V13.875C20.37,10.545,18.594,9,16.224,9a3.579,3.579,0,0,0-3.247,1.79v.038h-.024l.024-.038V9.253h-3.6c.045,1.017,0,10.837,0,10.837Z"/>
+                        </svg>              
+                    </a>
+                    <a [href]="blog.author.socialMedia.instagram" target="_blank">
+                        <svg class="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                            <linearGradient id="grad" x1="0.865" x2="0.104" y2="1" gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="#8a3ab9"/>
+                                <stop offset="0.274" stop-color="#bc2a8d"/>
+                                <stop offset="0.505" stop-color="#e95950"/>
+                                <stop offset="0.78" stop-color="#fbad50"/>
+                                <stop offset="1" stop-color="#fccc63"/>
+                            </linearGradient>
+                            </defs>
+                            <path id="instagram" d="M12,0C8.743,0,8.334.015,7.054.072A8.842,8.842,0,0,0,4.14.63,5.876,5.876,0,0,0,2.015,2.014,5.891,5.891,0,0,0,.63,4.14,8.79,8.79,0,0,0,.072,7.05C.015,8.332,0,8.741,0,12s.015,3.666.072,4.946A8.84,8.84,0,0,0,.63,19.86a6.143,6.143,0,0,0,3.508,3.51,8.81,8.81,0,0,0,2.913.558C8.332,23.985,8.741,24,12,24s3.666-.015,4.947-.072a8.858,8.858,0,0,0,2.914-.558,6.143,6.143,0,0,0,3.509-3.51,8.879,8.879,0,0,0,.558-2.913C23.985,15.667,24,15.26,24,12s-.015-3.667-.072-4.948A8.869,8.869,0,0,0,23.37,4.14a5.889,5.889,0,0,0-1.385-2.126A5.866,5.866,0,0,0,19.86.63,8.828,8.828,0,0,0,16.945.072C15.664.015,15.258,0,12,0h0ZM10.924,2.163H12c3.2,0,3.584.01,4.848.069a6.65,6.65,0,0,1,2.229.413,3.723,3.723,0,0,1,1.38.9,3.708,3.708,0,0,1,.9,1.38,6.591,6.591,0,0,1,.412,2.228c.059,1.264.07,1.644.07,4.846s-.012,3.584-.07,4.848a6.639,6.639,0,0,1-.412,2.227,3.977,3.977,0,0,1-2.278,2.275,6.6,6.6,0,0,1-2.228.414c-1.264.057-1.644.07-4.848.07s-3.585-.014-4.849-.07a6.628,6.628,0,0,1-2.228-.414,3.717,3.717,0,0,1-1.38-.9,3.72,3.72,0,0,1-.9-1.38,6.63,6.63,0,0,1-.413-2.227c-.057-1.265-.069-1.644-.069-4.849s.012-3.582.069-4.847a6.639,6.639,0,0,1,.414-2.229,3.723,3.723,0,0,1,.9-1.38,3.708,3.708,0,0,1,1.38-.9,6.628,6.628,0,0,1,2.228-.414c1.107-.051,1.536-.066,3.773-.068v0Zm7.482,1.992a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.406,4.155ZM12,5.838A6.163,6.163,0,1,0,18.165,12,6.162,6.162,0,0,0,12,5.838ZM12,8a4,4,0,1,1-4,4A4,4,0,0,1,12,8Z"/>
+                        </svg>
+                    </a>
+                    <a [href]="blog.author.socialMedia.facebook" target="_blank">
+                        <svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="facebook" d="M24,12.072A12,12,0,1,0,10.122,24V15.563H7.077V12.074h3.048V9.412c0-3.025,1.792-4.7,4.532-4.7a18.353,18.353,0,0,1,2.686.235v2.97H15.83a1.74,1.74,0,0,0-1.954,1.887v2.265H17.2l-.531,3.489h-2.8V24A12.054,12.054,0,0,0,24,12.072Z"/>
+                        </svg>              
+                    </a>
+                    <a [href]="blog.author.socialMedia.twitter" target="_blank">
+                        <svg class="twitter" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="twitter" d="M7.539,21.5A13.915,13.915,0,0,0,21.55,7.5c0-.21,0-.423-.009-.633A10.028,10.028,0,0,0,24,4.313a9.987,9.987,0,0,1-2.833.777,4.951,4.951,0,0,0,2.17-2.726,9.8,9.8,0,0,1-3.13,1.189,4.929,4.929,0,0,0-8.394,4.491A13.987,13.987,0,0,1,1.662,2.9,4.933,4.933,0,0,0,3.189,9.475,4.985,4.985,0,0,1,.96,8.863V8.93a4.932,4.932,0,0,0,3.948,4.827,4.8,4.8,0,0,1-1.3.173,4.845,4.845,0,0,1-.921-.085,4.925,4.925,0,0,0,4.6,3.415A9.882,9.882,0,0,1,1.17,19.37,9.48,9.48,0,0,1,0,19.3a14.016,14.016,0,0,0,7.539,2.2Z"/>
+                        </svg>   
+                    </a>
+                </div>
+            </div>
+            <div class="content flex row">
+                <div class="main-content-body flex col" [innerHTML]="blog.content | sanitizeHtml"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div @top-down 
+    class="clipboard button _14 _700 slow-change" 
+    *ngIf="showClipboardMessage">{{message}}</div>

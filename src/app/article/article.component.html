@@ -1,0 +1,349 @@
+<div class="article-body m-a">
+
+    <h1 class="heading _40 _700 poppins" *ngIf="displayH1" >{{displayTitle | titlecase}}</h1>
+    <div class="article-container" >
+        <div class="cont1 slow-change flex container border fill col"
+        *ngIf="blogs[0 + 10*(currentPage - 1)]"
+        >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[0 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[0 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[0 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[0 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark poppins m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{'_40': !media.s, '_30': media.s }" 
+                routerLink="/blog/{{ blogs[0 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[0 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[0 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+            <div class="_14 text-dark m-t-15 m-b-15">{{ blogs[0 + 10*(currentPage - 1)].description }}</div>
+            <a class="button sp-border fill pointer m-t-15 m-b-15 _14 _700 text-dark slow-change j-c" 
+                routerLink="/blog/{{ blogs[0 + 10*(currentPage - 1)].route }}"
+                >Read more</a>   
+        </div>
+
+        <div class="cont2 slow-change flex col container fill border" 
+            *ngIf="blogs[1 + 10*(currentPage - 1)]"
+            >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[1 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[1 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[1 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[1 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[1 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[1 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[1 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont3 slow-change flex col container fill border" 
+            *ngIf="blogs[2 + 10*(currentPage - 1)]"
+            >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[2 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[2 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[2 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[2 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[2 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[2 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[2 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont4 slow-change flex col container fill border"
+            *ngIf="blogs[3 + 10*(currentPage - 1)]">
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[3 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[3 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[3 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[3 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[3 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[3 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[3 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont5 slow-change flex col container fill border"
+            *ngIf="blogs[4 + 10*(currentPage - 1)]">
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[4 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[4 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[4 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[4 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[4 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[4 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[4 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont6 slow-change flex col container fill border"
+            *ngIf="blogs[5 + 10*(currentPage - 1)]">
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[5 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[5 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[5 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[5 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[5 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[5 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[5 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont7 slow-change flex col container fill border"
+            *ngIf="blogs[6 + 10*(currentPage - 1)]">
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[6 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[6 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[6 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[6 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[6 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[6 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[6 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont8 slow-change flex container border fill col"
+        *ngIf="blogs[7 + 10*(currentPage - 1)]"
+        >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[7 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[7 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[7 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[7 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark poppins m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{'_40': !media.s, '_30': media.s }" 
+                routerLink="/blog/{{ blogs[7 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[7 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[7 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+            <div class="_14 text-dark m-t-15 m-b-15">{{ blogs[7 + 10*(currentPage - 1)].description }}</div>
+            <a class="button sp-border fill pointer m-t-15 m-b-15 _14 _700 text-dark slow-change j-c" 
+                routerLink="/blog/{{ blogs[7 + 10*(currentPage - 1)].route }}"
+                >Read more</a>   
+        </div>
+
+        <div class="cont9 slow-change flex col container fill border" 
+            *ngIf="blogs[8 + 10*(currentPage - 1)]"
+            >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[8 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[8 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[8 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[8 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[8 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[8 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[8 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+        <div class="cont10 slow-change flex col container fill border" 
+            *ngIf="blogs[9 + 10*(currentPage - 1)]"
+            >
+            <div class="flex row a-fs m-b-5">
+                <img alt="author-image" class="auth-img m-r-5" [src]="blogs[9 + 10*(currentPage - 1)].author.image">
+                <div class="flex row wrap a-c m-t-5">
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-r-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">by</span> 
+                        <a routerLink="/about" fragment="{{ blogs[9 + 10*(currentPage - 1)].author.name.split(' ').join('-') }}" class="_14 text-dark m-l-5 _700 slow-change">{{ blogs[9 + 10*(currentPage - 1)].author.name }}</a>
+                    </span>
+                    <span class="flex row j-c a-c m-t-5 m-b-5 m-l-5">
+                        <span class="_10 italic text-light m-r-5">on</span> 
+                        <span class="_14 text-dark m-l-5 _700">{{ blogs[9 + 10*(currentPage - 1)].publishingDate | date:'mediumDate' }}</span>
+                    </span>
+                </div>
+            </div>
+            <a class="blog-title pointer _700 text-dark m-t-15 m-b-15 line-height-1_2 slow-change"
+                [ngClass]="{ '_22': media.l, '_18': !media.l }" 
+                routerLink="/blog/{{ blogs[9 + 10*(currentPage - 1)].route }}"
+                >{{ blogs[9 + 10*(currentPage - 1)].contentTitle }}</a>
+            <div class="category-container _12 flex row wrap">
+                <a routerLink="/article"
+                    [queryParams]="{ page: 1, category: category }"
+                    class="category-items" 
+                    *ngFor="let category of blogs[9 + 10*(currentPage - 1)].categories">{{category.split('-').join(' ') | uppercase}}</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- pagination -->
+    <div class="page-jumper flex row a-c j-c wrap m-a">
+        <a class="button fill border slow-change m-a-15 _14 _700 flex j-c"
+            *ngIf="currentPage>1"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: currentPage-1 }"
+            >Previous</a>
+        <a class="_14 _700 m-a-15 slow-change" 
+            *ngIf="currentPage > 3"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: 1 }"
+            >1</a>
+        <span class="_14 _700 m-a-15" *ngIf="currentPage > 4">. . .</span>
+        <a class="_14 _700 m-a-15 slow-change"
+            *ngIf="prev2prevPage"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: prev2prevPage }"
+            >{{ prev2prevPage }}</a>
+        <a class="_14 _700 m-a-15 slow-change"
+            *ngIf="prevPage"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: prevPage }"
+            >{{ prevPage }}</a>
+        <a class="curr _14 _700 text-highlight m-a-15">{{ currentPage }}</a>
+        <a class="_14 _700 m-a-15 slow-change"
+            *ngIf="nextPage"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: nextPage }"
+            >{{ nextPage }}</a>
+        <a class="_14 _700 m-a-15 slow-change"
+            *ngIf="next2nextPage"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: next2nextPage }"
+            >{{ next2nextPage }}</a>
+        <span class="_14 _700 m-a-15" *ngIf="currentPage < totalPages-3">. . .</span>
+        <a class="_14 _700 m-a-15 slow-change" 
+            *ngIf="currentPage < totalPages-2"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: totalPages }"
+            >{{ totalPages }}</a>
+        <a class="button fill border slow-change m-a-15 _14 _700 flex j-c"
+            *ngIf="currentPage<totalPages"
+            routerLink="/article"
+            queryParamsHandling="merge"
+            [queryParams]="{ page: currentPage+1 }"
+            >Next</a>
+    </div>
+    <!-- pagination -->
+
+
+</div>
