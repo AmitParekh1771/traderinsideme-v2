@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
   
   isActive = false;
-  adminInfo = {};
+  adminInfo = { name: "", email: "", isHead: false };
   isHead = false;
 
   constructor(

@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       .subscribe( (res: boolean) => {
         if(res) {
           this.isAuthorized = true;
-          this.router.navigate(['/admin/admin-list']);
+          this.router.navigate(['/admin/blog-list']);
         }
       }, (error: AppError) => {
         localStorage.removeItem('token');
