@@ -1,27 +1,37 @@
-# TraderinsidemeV2
+# TraderInsideMe - A Custom Blog CMS for the Financial Markets
+------------------------------------------------------------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+TraderInsideMe is a Content Management System (CMS) designed specifically for managing financial market trading blogs. Developed using Angular, NodeJS, and MongoDB, it empowers teams with a user-friendly platform to create and manage their content.
 
-## Development server
+## Key Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Admin Interface:
 
-## Code scaffolding
+-   Role-based access control: Ensures secure access management for different user roles.
+-   Live blog editing: Edit and publish blog posts in real-time.
+-   Hierarchical user management: Organize and manage users based on their roles within the team.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Blog Visitor Interface:
 
-## Build
+-   Category-wise blog segregation: Easy navigation through categorized blog posts.
+-   Blog search: Find specific content using intuitive search functionality.
+-   Commenting feature: Foster engagement by allowing readers to leave comments.
+-   Newsletter subscription: Build an audience by offering newsletter subscriptions.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Live Demo:
 
-## Running unit tests
+The application is live at [https://traderinsideme-v2.onrender.com](https://traderinsideme-v2.onrender.com/).
+Note: Project is deployed on free tier so first run will take some time to wake up from idle state.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Admin Demo Access (Limited):
 
-## Running end-to-end tests
+-   Visit the "/admin" route.
+-   Use credentials:
+    -   Username: johnsmith@gmail.com
+    -   Password: johnsmith@123
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Note: This demo account has "contributor" level access, which restricts access to certain features like admin and author list management.
 
-## Further help
+## Contact:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For a full demo, additional information, or any inquiries, please contact [mailto:parekhamit04@gmail.com](parekhamit04@gmail.com).
